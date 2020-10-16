@@ -1,0 +1,107 @@
+// ----- GLOBAL RESET -----
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; // 1rem = 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+
+body {
+    padding: 5rem;
+    background-color: navy; // Border around form
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ddd;
+    padding: 5rem 2rem;
+    ;
+}
+
+.form {
+
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        margin-bottom: 2rem;
+        font-size: 2.6rem;
+        font-weight: 300;
+        letter-spacing: .2rem;
+    }
+
+    &__label {
+        font-size: 1.4rem;
+        margin-bottom: .5rem;
+        margin-top: 1rem;
+    }
+
+    &__input {
+
+        &-text {
+            padding: .5rem .75rem;
+            border-radius: .5rem;
+            border: 2px solid black;
+            outline: none;
+
+            &:valid {
+                border: 2px solid green;
+            }
+
+            &:invalid {
+                border: 2px solid red;
+            }
+        }
+
+        &-error {
+            margin-left: .3rem;
+            color: red;
+        }
+    }
+
+    &__submit {
+        margin-top: 3rem;
+        width: 15rem;
+        padding: .8rem 1.25rem;
+        border-radius: .5rem;
+        outline: none;
+        border: none;
+        background-color: rgb(3, 3, 184);
+        color: #fff;
+        align-self: center;
+
+        &:hover {
+            background-color: navy
+        }
+    }
+}
+
+#country {
+    background-color: #fff;
+
+    &>option {
+        background-color: #fff;
+    }
+}
+
+.submit-status {
+    color: red;
+    align-self: center;
+    margin-top: .5rem;
+
+    &__success {
+        color: green;
+    }
+}

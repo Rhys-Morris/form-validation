@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="form-container">
+            <h2 class="form__header">REGISTER</h2>
+            <form action="submit" class="form" novalidate>
+                <label for="mail" class="form__label">Enter email:</label>
+                <div class="form__input">
+                    <input type="email" class="form__input-text" id="mail" required>
+                    <span class="form__input-error" id="mail-error">This field is required!</span>
+                </div>
+
+                <label for="country" class="form__label">Select country:</label>
+                <div class="form__input">
+                    <select class="form__input-text" id="country" required>
+                        <!--Add options dynamically-->
+                    </select>
+                    <span class="form__input-error" id="country-error"></span>
+                </div>
+
+                <label for="zipcode" class="form__label">Enter zipcode:</label>
+                <div class="form__input">
+                    <input type="number" class="form__input-text" id="zipcode" required min="1000" max="9999">
+                    <span class="form__input-error" id="zipcode-error">This field is required!</span>
+                </div>
+
+                <label for="password" class="form__label">Enter password:</label>
+                <div class="form__input">
+                    <input type="password" class="form__input-text" id="password" required minlength="8" maxlength="16">
+                    <span class="form__input-error" id="password-error">This field is required!</span>
+                </div>
+
+                <label for="password-confirm" class="form__label">Confirm password:</label>
+                <div class="form__input">
+                    <input type="password" class="form__input-text" id="password-confirm" required minlength="8" maxlength="16">
+                    <span class="form__input-error" id="password-confirm-error">This field is required!</span>
+                </div>
+
+                <button class="form__submit" id="submit">SUBMIT</button>
+                <span class="submit-status"></span>
+            </form>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
